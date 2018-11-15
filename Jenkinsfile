@@ -23,7 +23,7 @@ node{
  stage('Deploy')
    {
         bat 'echo "Starting to copy the build artifact"'
-        bat 'cp $WORKSPACE/dist/*.war /Users/bhaskarreddyl/BhaskarReddyL/Softwares/Running/apache-tomcat-9.0.12/webapps/'
+        bat 'copy $WORKSPACE/dist/*.war /Users/bhaskarreddyl/BhaskarReddyL/Softwares/Running/apache-tomcat-9.0.12/webapps/'
         bat'echo "Deployed  the build artifact into tomcat server successfully"'
 
       }
