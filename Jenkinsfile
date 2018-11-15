@@ -11,8 +11,8 @@ node{
    stage('Build') {
      
          if (isUnix()) {
-            sh "ant -f build-mt.xml" 
-             /* sh "${mvnHome}/bin/mvn package" */
+            bat "ant -f build-mt.xml" 
+             /* bat "${mvnHome}/bin/mvn package" */
          
          } else {
             bat "ant -f build-mt.xml"
@@ -22,9 +22,9 @@ node{
  
  stage('Deploy')
    {
-        sh 'echo "Starting to copy the build artifact"'
-        sh 'cp $WORKSPACE/dist/*.war /Users/bhaskarreddyl/BhaskarReddyL/Softwares/Running/apache-tomcat-9.0.12/webapps/'
-        sh 'echo "Deployed  the build artifact into tomcat server successfully"'
+        bat 'echo "Starting to copy the build artifact"'
+        bat 'cp $WORKSPACE/dist/*.war /Users/bhaskarreddyl/BhaskarReddyL/Softwares/Running/apache-tomcat-9.0.12/webapps/'
+        bat'echo "Deployed  the build artifact into tomcat server successfully"'
 
       }
 
